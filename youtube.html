@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>you.com clone</title>
+        <style>
+            body{
+                margin: 0;
+                padding-top: 60px;
+                padding-left: 25px;
+                padding-right: 20px;
+                background-color: rgb(248, 247, 247);
+            }
+            .thumnail{
+                width: 100%;
+                position: relative;
+            
+            }
+            .thumnail-1{
+                width: 100%;
+                
+            }
+            .thumnail-2{
+                width: 100%;
+            }
+            
+            
+        
+            .vp1{
+                display: inline-block;
+                width: 40px;
+                border-radius: 40px;
+                vertical-align: top;
+            }
+            .vpp{
+                display: inline-block;
+                width: 220px;
+            }
+            .parra1{
+                font-family: arial;
+                font-weight: bold;
+                margin-bottom:0px;
+            }
+            .parra2{
+                font-family: arial;
+                color:rgb(103, 103, 103);
+                margin-top: 9px;
+                margin-bottom: 0px;
+            }
+            .parra3{
+                font-family: arial;
+                font-weight: bold;
+                margin-top: 9px;
+                
+            }
+            .apple{
+                font-family:arial;
+                font-size: 16px;
+                font-weight: 100;
+                color: rgb(103, 103, 103);
+            }
+            .p1parra1{
+                font-family: arial,roboto,;
+                font-weight: bold;
+                width: 100%;
+                margin-top:0px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+            }
+            .p1parra3{
+                color: gray;
+                font-family: arial;
+                margin-top: 9px;
+                font-weight: bold;
+
+            }
+            .p1parra2{
+                font-family: arial;
+                color:rgb(103, 103, 103);
+                margin-top: 12px;
+                margin-bottom: 0px;
+            }
+            .p2parra1{
+                font-weight: bold;
+                font-family: arial;
+                margin-bottom: 0px;
+            }
+            .p2parra2{
+                font-family: arial;
+                color:rgb(103, 103, 103);
+                margin-top: 9px;
+                margin-bottom: 0px;
+            }
+            .p2parra3{
+                font-family: arial;
+                color:rgb(103, 103, 103);
+                margin-top: 9px;
+                margin-bottom: 0px;
+            }.vpimage{
+                width: 100%;
+            }
+            .thumnail-space{
+                margin-bottom: 12px;
+            }
+            .video-grid{
+                display: grid;
+                grid-template-columns: 40px 1fr;
+            }
+            .total-grid{
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 16px;
+                row-gap: 40px;
+                padding-left: 80px;
+                padding-top: 20px;
+            }
+            @media (max-width:750px){
+                .total-grid{
+                    grid-template-columns: 1fr 1fr;
+                }
+                
+            }@media(max-width:751px)and(min-width:999){
+                .total-grid{
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+            @media(min-width:1000px){
+                .total-grid{
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                }
+            }
+            .flex-div{
+                display: flex;
+                height: 55px;
+                flex-direction: row;
+                align-items: center;
+                gap: 40px;
+                position: fixed;
+                top:0;
+                left:0;
+                right: 0;
+                background-color: white;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: rgb(189, 186, 186) ;
+                z-index: 100;
+
+                
+
+            }
+
+            .flex-l{
+                width:250px;
+                display: flex;
+                flex-direction: row;
+                margin-left: ;
+            }
+            .flex-r{
+                width: 400px;
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                
+                align-items: center;
+            }
+            .search-div{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                max-width: 700px;
+               
+            }.menu{
+                height: 24px;
+                margin-left: 30px;
+            }
+            .youtubelogo{
+                height: 24px;
+                width: 100px;
+                margin-left: 30px;
+            }
+            .buttflex{
+                height: 40px;
+                width: 60px;
+                display: flex;
+                background-color:rgb(255, 252, 252);
+                border-width: 1px;
+                border-color:  rgb(192, 192, 192);
+                border-style: solid;
+                margin-left: -2px;
+                border-radius: 2px;
+                cursor: pointer;
+                position: relative;
+            }
+            .buttflex1{
+                height: 40px;
+                width: 40px;
+                display: flex;
+                
+                background-color: white;
+               
+              
+                margin-left: 8px;
+                border-radius: 70px;
+                border: none;
+                
+            }.buttflex2{
+                height: 20px;
+                width: 30px;
+                display: flex;
+                background-color:rgb(255, 252, 252);
+                border-width: 1px;
+                border-color:  rgb(192, 192, 192);
+                border-style: solid;
+                margin-left: -2px;
+                border-radius: 2px;
+                cursor: pointer;
+            }.buttflex3{
+                height: 20px;
+                width: 30px;
+                display: flex;
+                background-color:rgb(255, 252, 252);
+                border-width: 1px;
+                border-color:  rgb(192, 192, 192);
+                border-style: solid;
+                margin-left: -2px;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            .searchbar{
+                flex: 1;
+                font-size: 16px;
+                height: 36px;
+                border-color: rgb(192, 192, 192);
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 2px;
+                box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+                
+                margin-left: 50px;
+            
+                
+                
+            }
+            .voice{
+                border-radius: 20px;
+                margin-right: 5px;
+                
+            
+            }
+            .sidebar{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                top: 55px; 
+                background-color: white;
+                width: 72px;
+                z-index: 200;
+                padding-top: 5px;
+            }
+            
+            .video-preview{
+                position: relative;
+            }
+            .video-time{
+                background-color: black;
+                color: white;
+                position: absolute;
+                top: 150px;
+                right:5px;
+                font-family: arial;
+                font-size: 12px;
+                font-weight: 500;
+                padding-left: 4px;
+                padding-right: 4px;
+                border-radius: 2px;
+            }.video-preview1{
+                position: relative;
+            }
+            .video-preview2{
+                position: relative;
+            }
+            .sidebar1{
+                
+                height: 110px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                cursor: pointer;
+
+            }
+            .sidebar1:hover{
+                background-color: rgb(233, 235, 235);
+            
+            }.sidebar1 img{
+                height: 30px;
+                margin-bottom: 5px;
+                
+            }.sidebar1 div{
+                font-family: arial;
+                font-size: 10px;
+
+            }.j{
+                width: 30px;
+                height: 30px;
+                background-color: red;
+                border-radius: 50px;
+                font-size: 20px;
+                font-family: arial;
+                color: white;
+                text-align: center;
+                padding-top: 4px;
+                padding-left: 3px;
+                padding-right: 3px;
+                
+                
+            
+            }
+            .nt{
+                top:-2px;
+                right: 0;
+                position: absolute;
+                background-color: rgb(220, 9, 9);
+                border-radius: 50px;
+                padding-left: 3px;
+                padding-right: 3px;
+                height: 15px;
+                font-size: 13px;
+            }.ntn{
+                position: relative;
+            }.buttflex .sb,.buttflex1 .sb,.buttflex2 .sb{
+                position: absolute;
+                bottom: -40px;
+                background-color: rgb(136, 134, 134);
+                color: white;
+                padding-right: 4px;
+                padding-left: 4px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-radius: 2px;
+                opacity: 0;
+                transition: opacity 0.15s;
+                pointer-events: none;
+                white-space: nowrap;
+            }.buttflex:hover .sb, .buttflex1:hover .sb,.buttflex2:hover .sb{
+                opacity: 1;
+            }
+            .search-div .buttflex1,.flex-r .buttflex2{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-div">
+            
+            <div class="flex-l">
+                <img class="menu" src="icons8-menu-50.png">
+            <div class="youtubelogo"><img src="youtubelogo.svg"></div>
+                
+            </div> 
+            <div class="search-div"><input class="searchbar" type="text" placeholder="search"> 
+                <button class="buttflex">
+                    <img  src="search.png" >
+                    <div class="sb">Search</div>
+                </button>
+                <button class="buttflex1">
+                    <img class="voice" src="voice.png" >
+                    <div class="sb">Search with your voice</div>
+                </button>
+            
+                
+            </div>
+            <div class="flex-r">
+                <div class="buttflex2"><img src="creat.png">
+                    <div class="sb">Search</div></div>
+                
+                <div class="ntn"><img class="buttflex3" src="notification.png">
+                    <div class="nt">3</div>
+                </div>
+                <div class="j">J</div>
+            </div>
+        </div> 
+        <div class="sidebar">
+            <div class="sidebar1"><img src="home.png"> <div>Home</div></div>
+            <div class="sidebar1"><img src="explore.png"> <div>Explore</div></div>
+            <div class="sidebar1"><img src="subscription.png" > <div>subscription</div></div>
+            <div class="sidebar1"><img src="originals.png"> <div>Originals</div></div>
+            <div class="sidebar1"><img src="music.png"> <div>You Tube Music</div></div>
+            <div class="sidebar1"><img src="library.png" > <div>Library</div></div>
+        </div>
+        <div class="total-grid">
+            <div class="video-preview">
+                <img class="thumnail" src="unnamed.jpg">
+                <div class="video-time">5:20</div>
+                <p class="parra1">Get round-the-clock battery life on Mac.</p>
+                <p class="parra2">Get round-the-clock battery life on Mac.</p>
+                <p class="parra3">Sponsored &#183; <span class="apple" >Apple</span></p>
+            </div>
+            <div class="video-preview1">
+                <div class="thumnail-space"><img class="thumnail-1" src="image.jpg" ></div>
+                <div class="video-time">4:20</div>
+                <div class="video-grid">
+                    <div class="vp1"><img class="vpimage" src="unnamed (2).jpg"></div>
+                    <div class="vpp">
+                        <p class="p1parra1">How to put an HTML website online (on the Internet)</p>
+                        <p class="p1parra2">SuperSimpleDev</p>
+                        <p class="p1parra3">2M views &#183; <span class="apple" >2 years ago</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview2">
+                <img class="thumnail-2" src="newimage1.jpg">
+                <div class="video-time">10:00</div>
+                
+                <p class="p2parra1">Struggling with English? What Finally Worked for Me to Speak Confidently!</p>
+                <p class="p2parra2">Thasanthan</p>
+                <p class="p2parra3">880K views</p>
+            </div>
+            
+            <div class="video-preview1">
+                <div class="thumnail-space"><img class="thumnail-1" src="tumb1.avif" ></div>
+                <div class="video-time">5:20</div>
+                <div class="video-grid">
+                    <div class="vp1"><img class="vpimage" src="unnamed (2).jpg"></div>
+                    <div class="vpp">
+                        <p class="p1parra1">Premalo - Lyrical | Court | Priyadarshi, Harsh Roshan, Sridevi | Vijai Bulganin | Ram Jagadeesh</p>
+                        <p class="p1parra2">SuperSimpleDev</p>
+                        <p class="p1parra3">2M views &#183; <span class="apple" >2 years ago</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview1">
+                <div class="thumnail-space"><img class="thumnail-1" src="tumb2.avif" ></div>
+                <div class="video-time">5:20</div>
+                <div class="video-grid">
+                    <div class="vp1"><img class="vpimage" src="unnamed (2).jpg"></div>
+                    <div class="vpp">
+                        <p class="p1parra1">How to put an HTML website online (on the Internet)</p>
+                        <p class="p1parra2">SuperSimpleDev</p>
+                        <p class="p1parra3">2M views &#183; <span class="apple" >2 years ago</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview1">
+                <div class="thumnail-space"><img class="thumnail-1" src="thumb3.avif" ></div>
+                <div class="video-time">8:40</div>
+                <div class="video-grid">
+                    <div class="vp1"><img class="vpimage" src="unnamed (2).jpg"></div>
+                    <div class="vpp">
+                        <p class="p1parra1"></p>
+                        <p class="p1parra2">SuperSimpleDev</p>
+                        <p class="p1parra3">2M views &#183; <span class="apple" >2 years ago</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </body>
+</html>
